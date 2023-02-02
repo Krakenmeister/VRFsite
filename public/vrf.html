@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Corsec ACVP Vector Request Form">
+		<meta name="author" content="John Meo">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Corsec Vector Request</title>
+		<link rel="icon" type="image/png" href="/corsec_logo.png"/>
+		<link rel="stylesheet" href="/vrf.css"/>
+		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	</head>
+	<body>
+		<div id="page-wrapper">
+			<div id="vrf-wrapper">
+				<div id="title">Corsec Vector Request</div>
+				<div id="algorithms">
+					<div id="new-wrapper">
+						<div class="dropdown">
+							<div id="newBtn" class="button">Add Algorithm</div>
+							<div id="dropdown" class="dropdown-content">
+								<input type="text" placeholder="Search..." id="searchInput" onkeyup="filterFunction()">
+								<div id="dropdownElements"></div>
+							</div>
+						</div>
+					</div>
+					<div id="separator"></div>
+					<div id="list-wrapper"></div>
+					<img id="algorithmsMinimize" class="minimize" src="/minimize.png">
+				</div>
+				<div id="currentAlgo"></div>
+				<div id="output-wrapper">
+					<textarea id="output" spellcheck="false" readonly></textarea>
+					<img id="outputMinimize" class="minimize" src="/minimize.png">
+				</div>
+				<div id="extract-wrapper">
+					<div id="copyBtn" class="button">Copy to clipboard</div>
+					<div id="downloadBtn" class="button">Download as .json</div>
+					<!--<div id="loadBtn" class="button">Load registration file</div>-->
+				</div>
+			</div>
+		</div>
+		<script src="vrf.js"></script>
+	</body>
+</html>
